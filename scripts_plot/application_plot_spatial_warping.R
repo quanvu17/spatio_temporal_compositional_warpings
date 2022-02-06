@@ -1,7 +1,19 @@
-# Load source
-source("scripts/utils.R")
+# Reproducible code
+# Copyright (c) 2022 Quan Vu
+# Author: Quan Vu, quanv (at) uow.edu.au
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 
-#####################################
+# Load packages, functions, and environment
+source("scripts/utils.R")
 load("results/application_PIG_grounding_line.rda")
 load("results/application/allyears_nonstatsep_warpings.rda")
 load("results/application_clean_data.rda")
@@ -62,6 +74,7 @@ plot_warped <- ggplot() +
 
 #####################################
 
+# Load ice velocity data
 load("results/application_ice_velocity.rda")
 
 a <- (0:15)*16 + 1
@@ -73,7 +86,6 @@ coord_polarstereo$s1 <- grid[,1]
 coord_polarstereo$s2 <- grid[,2]
 coord_polarstereo_new <- coord_polarstereo[idx,]
 
-library(ggquiver)
 plot_velocity <- ggplot(data = coord_polarstereo_new,
                         aes(x = s1, y = s2,
                             u = VX, v = VY)) +

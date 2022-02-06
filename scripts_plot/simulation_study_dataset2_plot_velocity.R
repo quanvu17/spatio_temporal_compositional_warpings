@@ -1,4 +1,18 @@
-# Load source
+# Reproducible code
+# Copyright (c) 2022 Quan Vu
+# Author: Quan Vu, quanv (at) uow.edu.au
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# Load packages, functions, and environment
 source("scripts/utils.R")
 
 ######################################
@@ -39,7 +53,6 @@ s0 <- expand.grid(seq(-0.2, 0.6, length.out = 5),
 load("results/simulation_study_dataset2/statasym_warpings.rda")
 df.s <- data.frame(s1 = s0[,1], s2 = s0[,2])
 
-library(ggquiver)
 plot_velocity_stat <- ggplot(data = df.s,
                              aes(x = s1, y = s2,
                                  u = v_tf[1], v = v_tf[2])) +

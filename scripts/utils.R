@@ -1,5 +1,5 @@
 # Reproducible code
-# Copyright (c) 2021 Quan Vu
+# Copyright (c) 2022 Quan Vu
 # Author: Quan Vu, quanv (at) uow.edu.au
 #
 # This program is free software; you can redistribute it and/or
@@ -12,6 +12,8 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
+## Load conda environment
+## Modify this line of code to load your own environment
 reticulate::use_condaenv("TFv1-15", required=TRUE)
 
 # Load packages
@@ -22,6 +24,7 @@ library("devtools") ## for building deepspat
 library("fields")
 library("GpGp")
 library("ggplot2")
+library("ggquiver")
 library("gridExtra")
 library("ncdf4")
 library("RandomFields")

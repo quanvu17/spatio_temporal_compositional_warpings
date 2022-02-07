@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Generate the figures
+Rscript application_plot_obs.R
+Rscript application_plot_spatial_warping.R
+Rscript application_plot_standard_errors.R
+Rscript application_plot_temporal_warping.R
+Rscript simulation_study_dataset1_plot.R
+Rscript simulation_study_dataset2_plot.R
+Rscript simulation_study_dataset2_plot_velocity.R

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Create datasets for simulation study
 Rscript scripts/simulation_study_create_datasets.R
 
